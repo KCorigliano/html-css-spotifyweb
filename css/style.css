@@ -24,10 +24,6 @@ h4{
     text-transform: uppercase;
 }
 
-.m-b50px{
-    margin-bottom: 50px;
-}
-
 .m-b15px{
     margin-bottom: 15px;
 }
@@ -112,6 +108,14 @@ h4{
     padding-bottom: 70px;
 }
 
+.page h6{
+    font-size: 16px;
+}
+
+.page p{
+    font-size: 14px;
+}
+
 .header-button{
     width: 100%;
     height: 70px;
@@ -140,7 +144,11 @@ h4{
 }
 
 .container{
-    margin: 0 15px;
+    margin: 0 15px 50px 15px;
+}
+
+.page .container:last-child{
+    margin-bottom: 0;
 }
 
 .row{
@@ -223,6 +231,7 @@ footer h4{
 
 .left img{
     vertical-align: middle;
+    width: 50px;
 }
 
 footer .center{
@@ -281,8 +290,104 @@ footer .center .far{
 
 /* ------------------ /FOOTER ----------------- */
 
+/* MEDIUM-LARGE */
+
+@media screen and (min-width: 801px) and (max-width: 1199px) {
+
+    .header{
+        flex-wrap: wrap;
+    }
+
+    .first-row,
+    .second-row,
+    .third-row{
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    
+    .song{
+        width: calc(25% - 20px);
+        margin: 0 15px 15px 0px;
+    }
+
+    .first-row .song:first-child,
+    .first-row .song:nth-child(5),
+    .second-row .song:first-child,
+    .third-row .song:first-child{
+        margin-left: 0;
+    }
+
+    .first-row .song:last-child,
+    .first-row .song:nth-child(4),
+    .second-row .song:last-child,
+    .third-row .song:last-child{
+        margin-left: 0;
+    }
+
+    .left img{
+        margin: auto 10px;
+    }
+
+    .right{
+        text-align: start;
+    }
+
+    .right i{
+        font-size: 10px;
+        margin: 0;
+    }
+
+    #volume{
+        vertical-align: middle;
+        width: 55%;
+    }
+}
 
 /* MEDIUM */
+
+@media screen and (min-width: 575px) and (max-width: 800px) {
+
+    .header{
+        flex-wrap: wrap;
+    }
+
+    .first-row,
+    .second-row,
+    .third-row{
+        flex-wrap: wrap;
+    }
+    
+    .song{
+        width: calc(50% - 15px);
+        margin: 0 5px 15px 5px;
+    }
+
+    .first-row .song:nth-child(even){
+        margin-left: 0;
+    }
+
+    .first-row .song:nth-child(odd){
+        margin-left: 0;
+    }
+
+    .left img{
+        margin: auto 5px;
+    }
+
+    .right{
+        text-align: start;
+    }
+
+    .right i{
+        font-size: 10px;
+        margin: 0;
+    }
+
+    #volume{
+        vertical-align: middle;
+        width: 55%;
+    }
+}
 
 /* SMALL */
 
@@ -356,6 +461,7 @@ footer .center .far{
 
     .left img{
         width: 35px;
+        margin: auto 5px;
     }
 
     .left .text{
