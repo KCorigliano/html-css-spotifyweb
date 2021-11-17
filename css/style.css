@@ -15,6 +15,11 @@ body{
     color: #6d6d6d;
 }
 
+a{
+    color: #6d6d6d;
+    text-decoration: none;
+}
+
 h2{
     color: white;
 }
@@ -26,6 +31,10 @@ h4{
 
 .m-b15px{
     margin-bottom: 15px;
+}
+
+a:hover{
+    color: white;
 }
 
 /*--------------------------------------*/
@@ -61,6 +70,14 @@ h4{
     vertical-align: middle;
 }
 
+.green-border{
+    border-left: #adff2f 2px solid ;
+    width: 150px;
+    margin-left: -15px;
+    padding-left: 15px;
+    color: white;
+}
+
 .sidebar .far{
     margin-right: 10px;
 }
@@ -74,6 +91,11 @@ h4{
     line-height: 25px;
 }
 
+.scrollbar{
+    overflow-y: scroll;
+    overflow: hidden;
+}
+
 .sidebar .bottom p{
     display: inline-block;
     margin: 5px 0;
@@ -81,7 +103,6 @@ h4{
 
 .sidebar .bottom p:last-child{
     color: white;
-    font-weight: bold;
 }
 
 .sidebar .bottom p:last-child span{
@@ -99,7 +120,6 @@ h4{
 
 .page{
     width: calc(100% - 150px);
-    z-index: -1;
     background-color: #141922;
     position: absolute;
     right: 0;
@@ -117,7 +137,7 @@ h4{
 }
 
 .header-button{
-    width: 100%;
+    width: calc(100vw - 150px);
     height: 70px;
     background-color: rgba(8,11,18,0.5);
     z-index: 1000;
@@ -126,7 +146,25 @@ h4{
     align-items: center;
     position: fixed;
     top: 0;
-    left: 0px;
+    right: 0px;
+}
+
+.button{
+    padding: 10px 25px;
+    border: white 1px solid;
+    border-radius: 20px;
+    text-transform: uppercase;
+    background-color: rgb(8,11,18);
+    color: white;
+    font-size: 16px;
+}
+
+.a-button{
+    color: white;
+}
+
+.button:hover{
+    font-size: 18px;
 }
 
 .header{
@@ -234,6 +272,10 @@ footer h4{
     width: 50px;
 }
 
+.left a:hover{
+    text-decoration: underline;
+}
+
 footer .center{
     display: flex;
     flex-direction: column;
@@ -265,13 +307,12 @@ footer .center .far{
     font-size: 20px;
 }
 
-.button{
-    padding: 10px 15px;
-    border: white 1px solid;
-    border-radius: 20px;
-    text-transform: uppercase;
-    background-color: rgb(8,11,18);
+.center .top a{
     color: white;
+}
+
+.center .fa-play-circle:hover{
+    font-size: 24px;
 }
 
 .right{
@@ -417,6 +458,10 @@ footer .center .far{
 
     .sidebar .profile{
         height: 20px;
+    }
+
+    .header-button{
+        width: calc(100% - 50px);
     }
 
     .header{
