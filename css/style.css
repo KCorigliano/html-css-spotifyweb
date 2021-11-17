@@ -4,52 +4,35 @@
     box-sizing: border-box;
 }
 
-.main-container{
-    position: relative;
-    color: #6d6d6d;
-}
-
 body{
     height: 100vh;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.page{
-    width: calc(100% - 150px);
-    z-index: -1;
-    background-color: #141922;
-    position: absolute;
-    right: 0;
-    top: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-.header-button{
-    width: 100%;
-    height: 70px;
-    background-color: rgba(8,11,18,0.5);
-    z-index: 1000;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0px;
-}
-
-.header{
-    text-align: center;
-    text-transform: uppercase;
+.main-container{
+    position: relative;
     color: #6d6d6d;
-    margin-top: 70px;
 }
 
-.header span{
-    margin: 0 15px;
-    line-height: 50px;
+h2{
+    color: white;
 }
+
+h4{
+    color: white;
+    text-transform: uppercase;
+}
+
+.m-b50px{
+    margin-bottom: 50px;
+}
+
+.m-b15px{
+    margin-bottom: 15px;
+}
+
+/*--------------------------------------*/
 
 .sidebar{
     background-color: black;
@@ -66,6 +49,12 @@ body{
     z-index: 1;
     padding: 15px 15px 0px 15px;
     font-size: 12px;
+}
+
+.logo{
+    background: url(../img/logo.svg) no-repeat 50% 50%;
+    height: 50px;
+    background-size: 100%;
 }
 
 .sidebar .fas {
@@ -90,12 +79,17 @@ body{
 }
 
 .sidebar .bottom p{
+    display: inline-block;
     margin: 5px 0;
 }
 
 .sidebar .bottom p:last-child{
     color: white;
     font-weight: bold;
+}
+
+.sidebar .bottom p:last-child span{
+    margin-left: 5px;
 }
 
 .profile{
@@ -105,23 +99,48 @@ body{
     vertical-align: middle;
 }
 
-.logo{
-    background: url(../img/logo.svg) no-repeat 50% 50%;
-    height: 50px;
-    background-size: 100%;
+/* ------------------ /SIDEBAR ----------------- */
+
+.page{
+    width: calc(100% - 150px);
+    z-index: -1;
+    background-color: #141922;
+    position: absolute;
+    right: 0;
+    top: 0;
+    flex-grow: 1;
+    padding-bottom: 70px;
+}
+
+.header-button{
+    width: 100%;
+    height: 70px;
+    background-color: rgba(8,11,18,0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #6d6d6d;
+    margin-top: 70px;
+}
+
+.header span{
+    margin: 0 15px;
+    line-height: 50px;
+    font-size: 12px;
 }
 
 .container{
     margin: 0 15px;
-}
-
-h2{
-    color: white;
-}
-
-h4{
-    color: white;
-    text-transform: uppercase;
 }
 
 .row{
@@ -136,14 +155,6 @@ h4{
 .second-row,
 .third-row{
     display: flex;
-}
-
-.m-b50px{
-    margin-bottom: 50px;
-}
-
-.m-b15px{
-    margin-bottom: 15px;
 }
 
 .first-row .song:first-child,
@@ -169,6 +180,12 @@ h4{
     flex-grow: 1;
 }
 
+.circle{
+    border-radius: 50%;
+}
+
+/* ------------------ /MAIN PAGE ----------------- */
+
 footer{
     height: 70px;
     width: 100%;
@@ -181,18 +198,62 @@ footer{
     left: 0;
 }
 
+footer h4{
+    text-transform: none;
+}
+
 .left,
 .right {
     width: 20%;
-    border: black 1px solid;
-    background-color: brown;
 }
 
-.center{
+.left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.left .far{
+    margin: 0 10px;
+}
+
+.text{
+    margin-right: 25px
+}
+
+.left img{
+    vertical-align: middle;
+}
+
+footer .center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    color: white;
     width: 40%;
-    border: black 1px solid;
-    background-color: brown;
     flex-shrink: 2;
+}
+
+footer .center i{
+    margin: 0 5px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.bottom #range{
+    width: 50%;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+footer .bottom span{
+    font-size: 10px;
+}
+
+footer .center .far{
+    margin: 0 5px;
+    font-size: 20px;
 }
 
 .button{
@@ -204,9 +265,21 @@ footer{
     color: white;
 }
 
-.circle{
-    border-radius: 50%;
+.right{
+    text-align: center;
+    line-height: 70px;
 }
+
+.right i{
+    margin: 0 5px;
+}
+
+#volume{
+    vertical-align: middle;
+    width: 40%;
+}
+
+/* ------------------ /FOOTER ----------------- */
 
 
 /* MEDIUM */
@@ -219,15 +292,91 @@ footer{
         width: 50px;
     }
 
+    .page{
+        width: calc(100% - 50px);
+    }
+
     .logo{
         background: url(../img/logo-small.svg) no-repeat 50% 50%;
     }
 
     .playlist,
-    p,
-    h5 
+    .sidebar span,
     hr {
         display: none;
     }
 
+    .sidebar .bottom i{
+        margin: 10px 25%;
+    }
+
+    .sidebar .profile{
+        height: 20px;
+    }
+
+    .header{
+        flex-wrap: wrap;
+    }
+
+    .first-row,
+    .second-row,
+    .third-row{
+        flex-wrap: wrap;
+    }
+    
+    .song{
+        width: calc(50% - 15px);
+        margin: 0 5px 15px 5px;
+    }
+
+    .first-row .song:nth-child(even){
+        margin-left: 0;
+    }
+
+    .first-row .song:nth-child(odd){
+        margin-left: 0;
+    }
+
+    footer{
+        justify-content: flex-start;
+    }
+
+    footer .center{
+        width: 50%;
+    }
+
+    .bottom #range{
+        width: 30%;
+    }
+
+    .left,
+    .right {
+        width: 25%;
+    }
+
+    .left img{
+        width: 35px;
+    }
+
+    .left .text{
+        margin-right: 0;
+    }
+
+    .left .icon{
+        display: block;
+    }
+
+    .right{
+        text-align: start;
+    }
+
+    .right i{
+        font-size: 10px;
+        margin: 0;
+    }
+
+    #volume{
+        vertical-align: middle;
+        width: 55%;
+    }
 }
