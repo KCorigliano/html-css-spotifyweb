@@ -6,22 +6,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<div>
 
-    <main>
-        <div class="sidebar"></div>
-        <div class="page">
-            <div class="header"></div>
-        </div>
-    </main>
-    
-    <footer>
-        <div class="left"></div>
-        <div class="center"></div>
-        <div class="right"></div>
-    </footer>
+    <div class="main-container">
+        <main>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="top">
+                    <div class="logo"></div>
+                    <p><i class="fas fa-home"></i><span>Home</span></p>
+                    <p><i class="fas fa-search"></i><span>Cerca</span></p>
+                    <p><i class="fas fa-bookmark"></i><span>La tua libreria</span></p>
+                    <div class="playlist">
+                        <h4>playlist</h4>
+                        <p><i class="fas fa-plus-square"></i>Crea Playlist</p>
+                        <p>Nome Playlist</p>
+                        <p>Nome Playlist</p>
+                        <p>Nome Playlist</p>
+                        <p>Nome Playlist</p>
+                        <p>Nome Playlist</p>
+                        <p>Nome Playlist</p>
+                        <p>Nome Playlist</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <p><i class="far fa-arrow-alt-circle-down"></i>Installa app</p>
+                    <hr>
+                    <p><img class="profile" src="img/profile.svg" alt=""> Kevin Corigliano</p>
+                </div>
+            </div>
+
+            <!-- Main page -->
+            <div class="page relative">
+                <div class="header-button fixed">
+                    <input class="button" type="button" value="effettua l'upgrade">
+                </div>
+                <div class="header">
+                    <span>in evidenza</span>
+                    <span>podcast</span>
+                    <span>classifiche</span>
+                    <span>generi e mood</span>
+                    <span>nuove uscite</span>
+                    <span>scopri</span>
+                </div>
+
+                <!-- Prima riga album -->
+                <div class="container m-b50px">
+                    <h2 class="m-b15px">Recently Played</h2>
+                    <div class="row first-row">
+                        <div class="song fl">
+                            <img src="img/metal_lifting.jpg" alt="">
+                            <h6>Heavy Metal</h6>
+                            <p>Subtitle</p>
+                        </div>
+                        <div class="song fl">
+                            <img src="img/stranger.jpeg" alt="">
+                            <h6>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h6>
+                            <p>Kyle Dixon & Micheal Stein</p>
+                        </div>
+                        <div class="song fl">
+                            <img src="img/aquietplace.jpeg" alt="">
+                            <h6>A quiet place</h6>
+                            <p>Subtitle</p>
+                        </div>
+                        <div class="song fl">
+                            <img src="img/split.jpeg" alt="">
+                            <h6>Split</h6>
+                            <p>Subtitle</p>
+                        </div>
+                        <div class="song fl">
+                            <img src="img/cure.jpeg" alt="">
+                            <h6>A cure for wellness</h6>
+                            <p>Subtitle</p>
+                        </div>
+                        <div class="song fl">
+                            <img src="img/sinister.jpeg" alt="">
+                            <h6>Sinister</h6>
+                            <p>Subtitle</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seconda riga album -->
+                <div class="container m-b50px">
+                    <h2 class="m-b15px">Creato per Kevin Corigliano</h2>
+                    <p class="m-b15px">Più ascolti, più saranno i suggerimenti.</p>
+                    <div class="row second-row">
+                        <div class="song fl">
+                            <img src="img/radar.jpeg" alt="">
+                            <h6>Release Radar</h6>
+                        </div>
+                        <div class="song fl">
+                            <img src="img/mixdaily.jpeg" alt="">
+                            <h6>Daily Mix 1</h6>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Terza riga album -->
+                <div class="container">
+                    <h2 class="m-b15px">Artisti più popolari</h2>
+                    <p class="m-b15px">Più ascolti, più saranno i suggerimenti.</p>
+                    <div class="row third-row">
+                        <div class="song fl">
+                            <img class="circle" src="img/youg.jpeg" alt="">
+                        </div>
+                        <div class="song fl">
+                            <img class="circle" src="img/einaudi.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </footer>
+    </div>
 
 </body>
 </html>
