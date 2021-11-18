@@ -42,24 +42,17 @@ a:hover{
 .sidebar{
     background-color: black;
     color: #6d6d6d;
+    width: 150px;
+    height: calc(100vh - 70px);
+    padding: 15px 15px 0px 15px;
+    font-size: 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 150px;
-    height: calc(100vh - 70px);
-    flex-shrink: 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    padding: 15px 15px 0px 15px;
-    font-size: 12px;
 }
 
-.logo{
-    background: url(../img/logo.svg) no-repeat 50% 50%;
-    height: 50px;
-    background-size: 100%;
+.logo img:last-child{
+    display: none;
 }
 
 .sidebar .fas {
@@ -74,7 +67,10 @@ a:hover{
     border-left: #adff2f 2px solid ;
     width: 150px;
     margin-left: -15px;
-    padding-left: 15px;
+    padding-left: 10px;
+}
+
+.green-border a{
     color: white;
 }
 
@@ -87,13 +83,18 @@ a:hover{
     margin-right: 15px;
 }
 
-.playlist p{
+.playlist p,
+.scrollbar p{
     line-height: 25px;
 }
 
-.scrollbar{
-    overflow-y: scroll;
-    overflow: hidden;
+.scrollbar {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.sidebar .bottom{
+    bottom: 70px;
 }
 
 .sidebar .bottom p{
@@ -120,12 +121,13 @@ a:hover{
 
 .page{
     width: calc(100% - 150px);
+    height: calc(100vh - 70px);
     background-color: #141922;
     position: absolute;
     right: 0;
     top: 0;
     flex-grow: 1;
-    padding-bottom: 70px;
+    overflow-y: scroll;
 }
 
 .page h6{
@@ -157,6 +159,7 @@ a:hover{
     background-color: rgb(8,11,18);
     color: white;
     font-size: 16px;
+    margin-right: 20px;
 }
 
 .a-button{
@@ -316,7 +319,9 @@ footer .center .far{
 }
 
 .right{
-    text-align: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
     line-height: 70px;
 }
 
@@ -326,7 +331,7 @@ footer .center .far{
 
 #volume{
     vertical-align: middle;
-    width: 40%;
+    width: 60%;
 }
 
 /* ------------------ /FOOTER ----------------- */
@@ -368,20 +373,6 @@ footer .center .far{
     .left img{
         margin: auto 10px;
     }
-
-    .right{
-        text-align: start;
-    }
-
-    .right i{
-        font-size: 10px;
-        margin: 0;
-    }
-
-    #volume{
-        vertical-align: middle;
-        width: 55%;
-    }
 }
 
 /* MEDIUM */
@@ -416,17 +407,11 @@ footer .center .far{
     }
 
     .right{
-        text-align: start;
-    }
-
-    .right i{
-        font-size: 10px;
-        margin: 0;
+        font-size: 12px;
     }
 
     #volume{
-        vertical-align: middle;
-        width: 55%;
+        width: 80%;
     }
 }
 
@@ -442,12 +427,17 @@ footer .center .far{
         width: calc(100% - 50px);
     }
 
-    .logo{
-        background: url(../img/logo-small.svg) no-repeat 50% 50%;
+    .logo img:last-child{
+        display: block;
+    }
+
+    .logo img:first-child{
+        display: none;
     }
 
     .playlist,
     .sidebar span,
+    .scrollbar p,
     hr {
         display: none;
     }
@@ -501,7 +491,7 @@ footer .center .far{
 
     .left,
     .right {
-        width: 25%;
+        width: 30%;
     }
 
     .left img{
@@ -518,16 +508,7 @@ footer .center .far{
     }
 
     .right{
-        text-align: start;
-    }
-
-    .right i{
         font-size: 10px;
-        margin: 0;
-    }
-
-    #volume{
-        vertical-align: middle;
-        width: 55%;
+        padding-right: 5px;
     }
 }
