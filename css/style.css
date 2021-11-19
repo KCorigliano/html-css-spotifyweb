@@ -13,6 +13,7 @@ body{
 .main-container{
     position: relative;
     color: #6d6d6d;
+    overflow: hidden;
 }
 
 a{
@@ -48,7 +49,6 @@ a:hover{
     font-size: 12px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .logo img:last-child{
@@ -84,17 +84,14 @@ a:hover{
 }
 
 .playlist p,
-.scrollbar p{
+.side-scrollbar p{
     line-height: 25px;
 }
 
-.scrollbar {
+.side-scrollbar {
     overflow-y: auto;
     flex-grow: 1;
-}
-
-.sidebar .bottom{
-    bottom: 70px;
+    min-height: 75px;
 }
 
 .sidebar .bottom p{
@@ -184,6 +181,19 @@ a:hover{
     font-size: 12px;
 }
 
+.header span:first-child{
+    position: relative;
+}
+
+.green-underline{
+    width: 30px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 1px #adff2f solid;
+}
+
 .container{
     margin: 0 15px 50px 15px;
 }
@@ -240,7 +250,6 @@ footer{
     width: 100%;
     background-color: #282828;
     display: flex;
-    justify-content: space-between;
     z-index: 100;
     position: fixed;
     bottom: 0;
@@ -275,6 +284,10 @@ footer h4{
     width: 50px;
 }
 
+.left .text p{
+    font-size: 12px;
+}
+
 .left a:hover{
     text-decoration: underline;
 }
@@ -285,8 +298,8 @@ footer .center{
     justify-content: space-around;
     text-align: center;
     color: white;
-    width: 40%;
-    flex-shrink: 2;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 footer .center i{
@@ -437,7 +450,7 @@ footer .center .far{
 
     .playlist,
     .sidebar span,
-    .scrollbar p,
+    .side-scrollbar p,
     hr {
         display: none;
     }
@@ -477,14 +490,6 @@ footer .center .far{
         margin-left: 0;
     }
 
-    footer{
-        justify-content: flex-start;
-    }
-
-    footer .center{
-        width: 50%;
-    }
-
     .bottom #range{
         width: 30%;
     }
@@ -504,7 +509,11 @@ footer .center .far{
     }
 
     .left .icon{
-        display: block;
+        font-size: 10px;
+    }
+
+    .left .icon .far:first-child{
+        margin-bottom: 5px;
     }
 
     .right{
